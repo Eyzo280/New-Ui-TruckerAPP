@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:nowywygladapkitrucker/chat/list_chats.dart';
+import 'package:nowywygladapkitrucker/company_main/widgets/searchEmployees/SearchEmployees.dart';
 
 class DrawerCompanyMain extends StatelessWidget {
   @override
@@ -81,6 +82,13 @@ class DrawerCompanyMain extends StatelessWidget {
             leading: Icon(Icons.search),
             title: Text('Szukaj Pracownikow'),
             onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SearchEmployees();
+                  },
+                ),
+              );
               print('Szukaj Pracownikow');
             },
           ),

@@ -23,6 +23,7 @@ ThemeData basicTheme() {
           ),
         ],
       ),
+      title: TextStyle(color: Colors.white),
       button: base.button.copyWith(
         color: Colors.white,
       ),
@@ -31,6 +32,7 @@ ThemeData basicTheme() {
 
   final ThemeData base = ThemeData.light();
   return base.copyWith(
+    cardColor: Color.fromRGBO(98, 114, 123, 0.8),
     textTheme: _basicTextTheme(base.textTheme),
   );
 }
