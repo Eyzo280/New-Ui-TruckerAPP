@@ -93,6 +93,22 @@ class DrawerCompanyMain extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(MaterialCommunityIcons.train_car),
+            title: Text('Szukaj Kursow'),
+            onTap: () {
+              /*
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ;
+                  },
+                ),
+              );
+              */
+              print('Szukaj Kursow');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {

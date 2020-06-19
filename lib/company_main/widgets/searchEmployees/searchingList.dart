@@ -9,6 +9,19 @@ class SearchingList extends StatefulWidget {
 class _SearchingListState extends State<SearchingList> {
   final Color colorContent = Colors.white;
 
+  Widget _flightShuttleBuilder(
+    BuildContext flightContext,
+    Animation<double> animation,
+    HeroFlightDirection flightDirection,
+    BuildContext fromHeroContext,
+    BuildContext toHeroContext,
+  ) {
+    return DefaultTextStyle(
+      style: DefaultTextStyle.of(toHeroContext).style,
+      child: toHeroContext.widget,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Flexible(
@@ -36,13 +49,24 @@ class _SearchingListState extends State<SearchingList> {
                   ),
                   title: Hero(
                     tag: 'name' + index.toString(),
-                    child: Text('Marek Wladyslawski', style: TextStyle(color: colorContent),),
+                    flightShuttleBuilder: _flightShuttleBuilder,
+                    child: Text(
+                      'Marek Wladyslawski',
+                      style: TextStyle(color: colorContent),
+                    ),
                   ),
-                  subtitle: Text('Przejechane km: 500', style: TextStyle(color: colorContent),),
+                  subtitle: Text(
+                    'Przejechane km: 500',
+                    style: TextStyle(color: colorContent),
+                  ),
                   trailing: IconButton(
                     icon: Hero(
                       tag: 'button_invite' + index.toString(),
-                      child: Icon(Icons.insert_invitation, color: colorContent,),
+                      flightShuttleBuilder: _flightShuttleBuilder,
+                      child: Icon(
+                        Icons.insert_invitation,
+                        color: colorContent,
+                      ),
                     ),
                     onPressed: () {
                       print('Wyslij Zaproszenie');

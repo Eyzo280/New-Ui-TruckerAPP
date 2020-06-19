@@ -15,6 +15,7 @@ ThemeData basicTheme() {
       ),
       body2: base.body2.copyWith(
         fontWeight: FontWeight.bold,
+        /*
         shadows: [
           Shadow(
             offset: Offset(2.0, 2.0),
@@ -22,6 +23,7 @@ ThemeData basicTheme() {
             color: Color.fromARGB(255, 0, 0, 0),
           ),
         ],
+        */
       ),
       title: TextStyle(color: Colors.white),
       button: base.button.copyWith(
@@ -68,3 +70,16 @@ bodyLook({@required BuildContext context}) {
     ),
   );
 }
+
+Widget flightShuttleBuilder(
+    BuildContext flightContext,
+    Animation<double> animation,
+    HeroFlightDirection flightDirection,
+    BuildContext fromHeroContext,
+    BuildContext toHeroContext,
+  ) {
+    return DefaultTextStyle(
+      style: DefaultTextStyle.of(toHeroContext).style,
+      child: toHeroContext.widget,
+    );
+  }

@@ -20,10 +20,12 @@ class DetailsEmployee extends StatelessWidget {
                       10) *
                   0.5,
               child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Hero(
-                      tag: 'img_Employee' + index.toString(),
-                      child: Image.asset('images/image-512.png'))),
+                alignment: Alignment.topLeft,
+                child: Hero(
+                  tag: 'img_Employee' + index.toString(),
+                  child: Image.asset('images/image-512.png'),
+                ),
+              ),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,11 +43,12 @@ class DetailsEmployee extends StatelessWidget {
                     children: <Widget>[
                       Text('Nr Tel: '),
                       IconButton(
-                          icon: Icon(
-                            Icons.call,
-                            color: Colors.green,
-                          ),
-                          onPressed: () => print('Zadzwon'))
+                        icon: Icon(
+                          Icons.call,
+                          color: Colors.green,
+                        ),
+                        onPressed: () => print('Zadzwon'),
+                      ),
                     ],
                   ),
                 ),

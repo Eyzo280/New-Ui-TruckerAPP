@@ -14,7 +14,10 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat ' + widget.index.toString()),
+        title: Hero(
+          tag: 'NameChat' + widget.index.toString(),
+          child: Text('Stasiek W.'),
+        ),
         centerTitle: true,
         flexibleSpace: appBarLook(context: context),
       ),
